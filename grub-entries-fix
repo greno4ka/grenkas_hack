@@ -1,0 +1,8 @@
+#!/bin/bash
+
+sed -i "s|Windows Boot Manager (на /dev/nvme0n1p3)|Windows 10|" /boot/grub/grub.cfg
+sed -i 's|"Memtest86+-8.00 (может не работать c Secure Boot)"|"Memtest86+" --class memtest|' /boot/grub/grub.cfg
+sed -i "s|ALT Regular 20260316|ALT Linux Sisyphus|" /boot/grub/grub.cfg
+sed -i "s|'Параметры микропрограммы UEFI'|'Настройки BIOS' --class bios|" /boot/grub/grub.cfg
+sed -i "s|'Дополнительные параметры для ALT Linux Sisyphus'|'Другие ядра ALT Linux Sisyphus' --class alt-kernel|" /boot/grub/grub.cfg
+sed -i "s|(восстановление)|(восст.)|" /boot/grub/grub.cfg
